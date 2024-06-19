@@ -1,10 +1,11 @@
 import React, { useState, useEffect} from 'react';
-import styled from 'styled-components';
+//import styled from 'styled-components';
 import PetGallery from '../components/Gallery';
-import { petData } from '../hooks/petData';
-import { Pet } from '../models/Pet';
+//import petData from '../hooks/petData';
+//import { Pet } from '../models/Pet';
 
 const HomePage: React.FC = () => {
+    /*
     const { petData, loading, error} = petData();
     const [ selectedPets, setSelectedPets ] = useState<Pet[]>([]);
     const [ sortOrder, setSortOrder ] = useState<'asc' | 'desc'>('asc');
@@ -21,19 +22,13 @@ const HomePage: React.FC = () => {
         }
         return b.title.localeCompare(a.title); 
     });
+    */
 
     return (
         <div>
             <h1>Pet Plaza</h1>
-            {loading ? (
-                <p>Loading...</p>
-            ) : error ? (
-                <p>Uh Oh, there's an error: {error}</p>
-            ) : (
-                <PetGallery
-                    pets={sortedPetData}
-                />
-            )}
+            <p>Here is the home page!</p>
+            <PetGallery />
         </div>
     );
 };
